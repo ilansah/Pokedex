@@ -1,47 +1,36 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import PokemonCard from './components/PokemonCard.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="app">
+    <header>
+      <h1>Mon Pokédex</h1>
+    </header>
+    <PokemonCard />
+  </div>
 </template>
 
-<style scoped>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app {
+  padding: 20px;
+}
+
 header {
-  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+header h1 {
+  color: white;
+  font-size: 48px;
+  margin: 0;
+  font-weight: 700;
 }
 </style>
