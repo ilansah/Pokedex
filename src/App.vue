@@ -68,7 +68,7 @@ const handleSelect = (pokemon) => {
     <SearchInput v-model="search" />
     
     <div class="pokemon-container">
-      <PokemonCard 
+      <PokemonCard
         v-for="pokemon in filteredPokemons" 
         :key="pokemon.id" 
         :pokemon="pokemon"

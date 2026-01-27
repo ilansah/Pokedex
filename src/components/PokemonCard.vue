@@ -22,6 +22,7 @@ const handleClick = () => {
     <div class="type">
       <p>{{ pokemon.type }}</p>
     </div>
+    <button class="favori" @click.stop="alert('Ajouté aux favoris !')">Favori</button>
   </div>
 </template>
 
@@ -114,6 +115,21 @@ p {
     background-color: #c0c0c0;
     padding: 5px 15px;
     border-radius: 15px;
+}
+
+.favori {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    background: #667eea;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.favori:hover {
+    background: #764ba2;
 }
 
 </style>
